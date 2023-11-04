@@ -17,8 +17,9 @@ function App() {
       <Person></Person>
       <Person></Person>
       <h1>Cricketer Information</h1>
-      <Friend></Friend>
-      <Friend></Friend>
+      <Friend movie="Om Shnati Om"></Friend>
+      <Friend movie="Shingam"></Friend>
+      <Friend movie="Mouse 1"></Friend>
      {/*
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -54,7 +55,8 @@ function App() {
   );
 }
 
-function Person() {
+function Person(props) {
+  console.log(props);
   {/* Ei simple r theke Return korar process */}
   return (
     <div className='person'>
@@ -70,10 +72,11 @@ He scored his first century against Ireland, but it was his knock against Zimbab
   )
 }
 
-function Friend(){
+function Friend(props){
+  console.log(props);
   return(
     <div className='container'>
-      <h3>Full Name: Tamim Iqbal Khan</h3>
+      <h3>Full Name: {props.movie}</h3>
       <p>BORN: Mar 20, 1989 (34 years)</p>
       <p>BATTING STYLE: Left hand Bat</p>
       <p>PLAYING ROLE: Opening Batter</p>
