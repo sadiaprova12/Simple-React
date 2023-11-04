@@ -11,10 +11,15 @@ const singerStyle= {
 }
 
 function App() {
+  {/* Array data loaded process in dynamic */}
+  const Person =['Tamim Iqbal', 'Shaheen Afridi'];
   return (
     <div className="App">
-      <Person></Person>
-      <Person></Person>
+      {
+        Person.map(person => person)
+      }
+      <Person name={Person[0]}></Person>
+      <Person name={Person[1]}></Person>
       <Person></Person>
       <h1>Cricketer Information</h1>
       <Friend movie="Om Shnati Om"></Friend>
